@@ -37,6 +37,11 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <table>
+        <tr th:each="job, idx : ${jobs}" th:class="${idx.odd} ? 'odd'">
+            <td th:text="${job}"></td>
+        </tr>
+    </table>
 
 </div>
 
