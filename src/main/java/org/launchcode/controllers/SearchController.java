@@ -31,7 +31,7 @@ public class SearchController {
     @RequestMapping(value = "results")
     public String searchJobForm(@RequestParam String searchTerm, @RequestParam String searchType, Model model) {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-        if (searchType.equals("all")){
+        if (searchType.equals("avll")){
             jobs =JobData.findByValue(searchTerm);
         }
         else{
